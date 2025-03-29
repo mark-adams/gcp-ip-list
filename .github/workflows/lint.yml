@@ -1,0 +1,41 @@
+name: Linting
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-code:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-go@v5
+      with:
+        go-version: '^1.24'
+
+    - name: Lint
+      uses: golangci/golangci-lint-action@v7
+      with:
+        version: v2.0.2
+
+  lint-terraform:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: opentofu/setup-opentofu@v1
+      with:
+        tofu_version: 1.9
+
+    - name: Format
+      run: tofu fmt -check
+      working-directory: ./terraform
+      
+    - name: Init
+      run: tofu init
+      working-directory: ./terraform
+
+    - name: Validate
+      run: tofu validate
+      working-directory: ./terraform

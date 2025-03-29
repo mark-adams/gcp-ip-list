@@ -1,0 +1,52 @@
+name: Releasing
+
+on:
+  push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      -
+        name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '^1.24'
+
+      -
+        name: Set up cosign
+        uses: sigstore/cosign-installer@v3.8.1
+      
+      - 
+        name: Set up homebrew deploy key
+        shell: bash
+        env:
+          HOMEBREW_GH_DEPLOY_KEY: ${{ secrets.HOMEBREW_GH_DEPLOY_KEY }}
+        run: |
+          echo $HOMEBREW_GH_DEPLOY_KEY | base64 -d > /tmp/HOMEBREW_GH_DEPLOY_KEY
+          chmod 700 /tmp/HOMEBREW_GH_DEPLOY_KEY
+  
+      -
+        name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          distribution: goreleaser
+          version: '~> v2'
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: "dist/*.tar.gz,dist/*.zip,dist/*_checksums.txt"

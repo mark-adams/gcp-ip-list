@@ -1,0 +1,4 @@
+terraform/.terraform*
+terraform/*.tfstate*
+.vscode# Added by goreleaser init:
+dist/

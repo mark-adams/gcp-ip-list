@@ -1,0 +1,661 @@
+[
+  {
+    "assetType": "sqladmin.googleapis.com/Instance",
+    "createTime": "2024-07-01T16:29:10Z",
+    "displayName": "ip-list-test-db",
+    "location": "us-west1",
+    "name": "//cloudsql.googleapis.com/projects/fuzzy-pickles-428115/instances/ip-list-test-db",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "RUNNABLE",
+    "versionedResources": [
+      {
+        "resource": {
+          "backendType": "SECOND_GEN",
+          "connectionName": "fuzzy-pickles-428115:us-west1:ip-list-test-db",
+          "createTime": "2024-07-01T16:29:10.763Z",
+          "databaseInstalledVersion": "POSTGRES_15_7",
+          "databaseVersion": "POSTGRES_15",
+          "gceZone": "us-west1-c",
+          "geminiConfig": {
+            "activeQueryEnabled": false,
+            "entitled": false,
+            "googleVacuumMgmtEnabled": false,
+            "indexAdvisorEnabled": false,
+            "oomSessionCancelEnabled": false
+          },
+          "instanceType": "CLOUD_SQL_INSTANCE",
+          "ipAddresses": [
+            {
+              "ipAddress": "35.247.31.30",
+              "type": "PRIMARY"
+            },
+            {
+              "ipAddress": "34.168.47.251",
+              "type": "OUTGOING"
+            },
+            {
+              "ipAddress": "10.252.0.3",
+              "type": "PRIVATE"
+            }
+          ],
+          "kind": "sql#instance",
+          "maintenanceVersion": "POSTGRES_15_7.R20240514.00_06",
+          "name": "ip-list-test-db",
+          "project": "fuzzy-pickles-428115",
+          "region": "us-west1",
+          "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/fuzzy-pickles-428115/instances/ip-list-test-db",
+          "serverCaCert": {
+            "certSerialNumber": "0",
+            "commonName": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=cb3ffc5a-186b-4f7c-9776-ba7954dbe91d",
+            "createTime": "2024-07-01T16:32:49.374Z",
+            "expirationTime": "2034-06-29T16:33:49.374Z",
+            "instance": "ip-list-test-db",
+            "kind": "sql#sslCert",
+            "sha1Fingerprint": "a51df67568de4c795df284ef2eca8df9699783ab"
+          },
+          "serviceAccountEmailAddress": "p828107101350-iz9ajm@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+          "settings": {
+            "activationPolicy": "ALWAYS",
+            "availabilityType": "ZONAL",
+            "backupConfiguration": {
+              "backupRetentionSettings": {
+                "retainedBackups": 7,
+                "retentionUnit": "COUNT"
+              },
+              "enabled": false,
+              "kind": "sql#backupConfiguration",
+              "startTime": "04:00",
+              "transactionLogRetentionDays": 7,
+              "transactionalLogStorageState": "TRANSACTIONAL_LOG_STORAGE_STATE_UNSPECIFIED"
+            },
+            "connectorEnforcement": "NOT_REQUIRED",
+            "dataDiskSizeGb": "10",
+            "dataDiskType": "PD_SSD",
+            "deletionProtectionEnabled": false,
+            "edition": "ENTERPRISE",
+            "enableGoogleMlIntegration": false,
+            "ipConfiguration": {
+              "enablePrivatePathForGoogleCloudServices": false,
+              "ipv4Enabled": true,
+              "privateNetwork": "projects/fuzzy-pickles-428115/global/networks/public-ip-list-network",
+              "requireSsl": false,
+              "sslMode": "ALLOW_UNENCRYPTED_AND_ENCRYPTED"
+            },
+            "kind": "sql#settings",
+            "locationPreference": {
+              "kind": "sql#locationPreference",
+              "zone": "us-west1-c"
+            },
+            "pricingPlan": "PER_USE",
+            "replicationType": "SYNCHRONOUS",
+            "settingsVersion": "1",
+            "storageAutoResize": true,
+            "storageAutoResizeLimit": "0",
+            "tier": "db-f1-micro"
+          },
+          "sqlNetworkArchitecture": "NEW_NETWORK_ARCHITECTURE",
+          "state": "RUNNABLE",
+          "upgradableDatabaseVersions": [
+            {
+              "displayName": "PostgreSQL 16",
+              "majorVersion": "POSTGRES_16",
+              "name": "POSTGRES_16"
+            }
+          ]
+        },
+        "version": "v1beta4"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "IPAddress": "34.54.244.120"
+    },
+    "assetType": "compute.googleapis.com/ForwardingRule",
+    "createTime": "2024-07-01T16:17:45Z",
+    "displayName": "ip-list-test-forwarding-rule-external-static",
+    "location": "global",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-external-static",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "UNSPECIFIED",
+    "versionedResources": [
+      {
+        "resource": {
+          "IPAddress": "34.54.244.120",
+          "IPProtocol": "TCP",
+          "creationTimestamp": "2024-07-01T09:17:45.005-07:00",
+          "description": "",
+          "fingerprint": "30EfwXVW+SI=",
+          "id": "5285103070662846535",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "loadBalancingScheme": "EXTERNAL_MANAGED",
+          "name": "ip-list-test-forwarding-rule-external-static",
+          "networkTier": "PREMIUM",
+          "portRange": "80-80",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-external-static",
+          "target": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/targetHttpProxies/ip-list-test-http-proxy"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "IPAddress": "34.54.243.87"
+    },
+    "assetType": "compute.googleapis.com/ForwardingRule",
+    "createTime": "2024-07-01T16:17:44Z",
+    "displayName": "ip-list-test-forwarding-rule-external",
+    "location": "global",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-external",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "UNSPECIFIED",
+    "versionedResources": [
+      {
+        "resource": {
+          "IPAddress": "34.54.243.87",
+          "IPProtocol": "TCP",
+          "creationTimestamp": "2024-07-01T09:17:44.848-07:00",
+          "description": "",
+          "fingerprint": "bgYy/WUxi/E=",
+          "id": "9188148613718435911",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "loadBalancingScheme": "EXTERNAL_MANAGED",
+          "name": "ip-list-test-forwarding-rule-external",
+          "networkTier": "PREMIUM",
+          "portRange": "80-80",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-external",
+          "target": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/targetHttpProxies/ip-list-test-http-proxy"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "IPAddress": "10.0.2.2"
+    },
+    "assetType": "compute.googleapis.com/ForwardingRule",
+    "createTime": "2024-07-01T16:17:23Z",
+    "displayName": "ip-list-test-forwarding-rule-internal",
+    "location": "global",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-internal",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "UNSPECIFIED",
+    "versionedResources": [
+      {
+        "resource": {
+          "IPAddress": "10.0.2.2",
+          "IPProtocol": "TCP",
+          "creationTimestamp": "2024-07-01T09:17:23.267-07:00",
+          "description": "",
+          "fingerprint": "u73W22hq6w8=",
+          "id": "4239899161156085884",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "loadBalancingScheme": "INTERNAL_MANAGED",
+          "name": "ip-list-test-forwarding-rule-internal",
+          "network": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/networks/public-ip-list-network",
+          "networkTier": "PREMIUM",
+          "portRange": "80-80",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-internal",
+          "subnetwork": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/subnetworks/lb-subnet",
+          "target": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/targetHttpProxies/ip-list-test-http-proxy-internal"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "address": "34.19.68.170"
+    },
+    "assetType": "compute.googleapis.com/Address",
+    "createTime": "2024-07-01T16:16:37Z",
+    "displayName": "ip-list-test-public-not-used",
+    "location": "us-west1",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/regions/us-west1/addresses/ip-list-test-public-not-used",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "RESERVED",
+    "versionedResources": [
+      {
+        "resource": {
+          "address": "34.19.68.170",
+          "addressType": "EXTERNAL",
+          "creationTimestamp": "2024-07-01T09:16:37.153-07:00",
+          "description": "",
+          "id": "1537931816448518282",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "name": "ip-list-test-public-not-used",
+          "networkTier": "PREMIUM",
+          "region": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/addresses/ip-list-test-public-not-used",
+          "status": "RESERVED"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "address": "34.19.80.22"
+    },
+    "assetType": "compute.googleapis.com/Address",
+    "createTime": "2024-07-01T16:16:36Z",
+    "displayName": "ip-list-test-nat",
+    "location": "us-west1",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/regions/us-west1/addresses/ip-list-test-nat",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "IN_USE",
+    "versionedResources": [
+      {
+        "resource": {
+          "address": "34.19.80.22",
+          "addressType": "EXTERNAL",
+          "creationTimestamp": "2024-07-01T09:16:36.983-07:00",
+          "description": "",
+          "id": "8865645897488230539",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "name": "ip-list-test-nat",
+          "networkTier": "PREMIUM",
+          "region": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/addresses/ip-list-test-nat",
+          "status": "IN_USE",
+          "users": [
+            "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/routers/ip-list-test-router"
+          ]
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "deletionProtection": "FALSE",
+      "externalIPs": [
+        "34.83.128.26"
+      ],
+      "id": "3849170704745326773",
+      "internalIPs": [
+        "10.0.3.2"
+      ],
+      "machineType": "f1-micro",
+      "networkInterfaceNames": [
+        "nic0"
+      ],
+      "networkInterfaceNetworks": [
+        "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/networks/public-ip-list-network"
+      ],
+      "networkInterfaceStackTypes": [
+        "IPV4_ONLY"
+      ]
+    },
+    "assetType": "compute.googleapis.com/Instance",
+    "createTime": "2024-07-01T16:16:26Z",
+    "displayName": "ip-list-test-vm",
+    "location": "us-west1-a",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/zones/us-west1-a/instances/ip-list-test-vm",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "RUNNING",
+    "versionedResources": [
+      {
+        "resource": {
+          "canIpForward": false,
+          "cpuPlatform": "Intel Broadwell",
+          "creationTimestamp": "2024-07-01T09:16:26.669-07:00",
+          "deletionProtection": false,
+          "disks": [
+            {
+              "architecture": "X86_64",
+              "autoDelete": true,
+              "boot": true,
+              "deviceName": "persistent-disk-0",
+              "diskSizeGb": "10",
+              "guestOsFeatures": [
+                {
+                  "type": "UEFI_COMPATIBLE"
+                },
+                {
+                  "type": "VIRTIO_SCSI_MULTIQUEUE"
+                },
+                {
+                  "type": "GVNIC"
+                },
+                {
+                  "type": "SEV_CAPABLE"
+                },
+                {
+                  "type": "SEV_LIVE_MIGRATABLE_V2"
+                }
+              ],
+              "index": 0,
+              "interface": "SCSI",
+              "licenses": [
+                "https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-12-bookworm"
+              ],
+              "mode": "READ_WRITE",
+              "source": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/zones/us-west1-a/disks/ip-list-test-vm",
+              "type": "PERSISTENT"
+            }
+          ],
+          "fingerprint": "b127fMiJTS4=",
+          "id": "3849170704745326773",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "lastStartTimestamp": "2024-07-01T09:16:34.058-07:00",
+          "machineType": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/zones/us-west1-a/machineTypes/f1-micro",
+          "name": "ip-list-test-vm",
+          "networkInterfaces": [
+            {
+              "accessConfigs": [
+                {
+                  "name": "external-nat",
+                  "natIP": "34.83.128.26",
+                  "networkTier": "PREMIUM",
+                  "type": "ONE_TO_ONE_NAT"
+                }
+              ],
+              "fingerprint": "YpNeZh6SOh0=",
+              "name": "nic0",
+              "network": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/networks/public-ip-list-network",
+              "networkIP": "10.0.3.2",
+              "stackType": "IPV4_ONLY",
+              "subnetwork": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/subnetworks/backend-subnet"
+            }
+          ],
+          "resourceStatus": {},
+          "scheduling": {
+            "automaticRestart": true,
+            "onHostMaintenance": "MIGRATE",
+            "preemptible": false,
+            "provisioningModel": "STANDARD"
+          },
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/zones/us-west1-a/instances/ip-list-test-vm",
+          "shieldedInstanceConfig": {
+            "enableIntegrityMonitoring": true,
+            "enableSecureBoot": false,
+            "enableVtpm": true
+          },
+          "shieldedInstanceIntegrityPolicy": {
+            "updateAutoLearnPolicy": true
+          },
+          "startRestricted": false,
+          "status": "RUNNING",
+          "tags": {
+            "fingerprint": "42WmSpB8rSM="
+          },
+          "zone": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/zones/us-west1-a"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "assetType": "compute.googleapis.com/Router",
+    "createTime": "2024-07-01T16:16:25Z",
+    "displayName": "ip-list-test-router",
+    "location": "us-west1",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/regions/us-west1/routers/ip-list-test-router",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "versionedResources": [
+      {
+        "resource": {
+          "creationTimestamp": "2024-07-01T09:16:25.814-07:00",
+          "encryptedInterconnectRouter": false,
+          "id": "3974532128576596150",
+          "name": "ip-list-test-router",
+          "nats": [
+            {
+              "enableEndpointIndependentMapping": false,
+              "endpointTypes": [
+                "ENDPOINT_TYPE_VM"
+              ],
+              "icmpIdleTimeoutSec": 30,
+              "name": "ip-list-test-router-nat",
+              "natIpAllocateOption": "MANUAL_ONLY",
+              "natIps": [
+                "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/addresses/ip-list-test-nat"
+              ],
+              "sourceSubnetworkIpRangesToNat": "ALL_SUBNETWORKS_ALL_IP_RANGES",
+              "tcpEstablishedIdleTimeoutSec": 1200,
+              "tcpTimeWaitTimeoutSec": 120,
+              "tcpTransitoryIdleTimeoutSec": 30,
+              "type": "PUBLIC",
+              "udpIdleTimeoutSec": 30
+            }
+          ],
+          "network": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/networks/public-ip-list-network",
+          "region": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/regions/us-west1/routers/ip-list-test-router"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "address": "10.252.0.0"
+    },
+    "assetType": "compute.googleapis.com/Address",
+    "createTime": "2024-07-01T16:16:01Z",
+    "displayName": "ip-list-test-cloudsql-private",
+    "location": "global",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/global/addresses/ip-list-test-cloudsql-private",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "RESERVED",
+    "versionedResources": [
+      {
+        "resource": {
+          "address": "10.252.0.0",
+          "addressType": "INTERNAL",
+          "creationTimestamp": "2024-07-01T09:16:01.120-07:00",
+          "description": "",
+          "id": "6786608055203096750",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "name": "ip-list-test-cloudsql-private",
+          "network": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/networks/public-ip-list-network",
+          "networkTier": "PREMIUM",
+          "prefixLength": 16,
+          "purpose": "VPC_PEERING",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/addresses/ip-list-test-cloudsql-private",
+          "status": "RESERVED"
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "address": "34.54.244.120"
+    },
+    "assetType": "compute.googleapis.com/Address",
+    "createTime": "2024-07-01T16:15:50Z",
+    "displayName": "ip-list-test-static-address",
+    "location": "global",
+    "name": "//compute.googleapis.com/projects/fuzzy-pickles-428115/global/addresses/ip-list-test-static-address",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "IN_USE",
+    "versionedResources": [
+      {
+        "resource": {
+          "address": "34.54.244.120",
+          "addressType": "EXTERNAL",
+          "creationTimestamp": "2024-07-01T09:15:50.217-07:00",
+          "description": "",
+          "id": "7525013783512574169",
+          "labelFingerprint": "42WmSpB8rSM=",
+          "name": "ip-list-test-static-address",
+          "networkTier": "PREMIUM",
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/addresses/ip-list-test-static-address",
+          "status": "IN_USE",
+          "users": [
+            "https://www.googleapis.com/compute/v1/projects/fuzzy-pickles-428115/global/forwardingRules/ip-list-test-forwarding-rule-external-static"
+          ]
+        },
+        "version": "v1"
+      }
+    ]
+  },
+  {
+    "additionalAttributes": {
+      "endpoint": "34.105.114.31"
+    },
+    "assetType": "container.googleapis.com/Cluster",
+    "createTime": "2024-07-01T16:15:50Z",
+    "displayName": "ip-list-test-cluster",
+    "location": "us-west1",
+    "name": "//container.googleapis.com/projects/fuzzy-pickles-428115/locations/us-west1/clusters/ip-list-test-cluster",
+    "parentAssetType": "cloudresourcemanager.googleapis.com/Project",
+    "parentFullResourceName": "//cloudresourcemanager.googleapis.com/projects/fuzzy-pickles-428115",
+    "project": "projects/828107101350",
+    "state": "RUNNING",
+    "versionedResources": [
+      {
+        "resource": {
+          "addonsConfig": {
+            "gcePersistentDiskCsiDriverConfig": {
+              "enabled": true
+            },
+            "kubernetesDashboard": {
+              "disabled": true
+            },
+            "networkPolicyConfig": {
+              "disabled": true
+            }
+          },
+          "autopilot": {},
+          "autoscaling": {
+            "autoscalingProfile": "BALANCED"
+          },
+          "binaryAuthorization": {},
+          "clusterIpv4Cidr": "10.84.0.0/14",
+          "createTime": "2024-07-01T16:15:50+00:00",
+          "currentMasterVersion": "1.29.4-gke.1043002",
+          "currentNodeVersion": "1.29.4-gke.1043002",
+          "databaseEncryption": {
+            "currentState": "CURRENT_STATE_DECRYPTED",
+            "state": "DECRYPTED"
+          },
+          "defaultMaxPodsConstraint": {
+            "maxPodsPerNode": "110"
+          },
+          "endpoint": "34.105.114.31",
+          "enterpriseConfig": {
+            "clusterTier": "STANDARD"
+          },
+          "etag": "9b315a35-e894-45a3-8e76-844ecc43789c",
+          "id": "b4fa9d0e8f524c73a5d3dc5e54a3490e51794b9e83b1417bb1c69fb87e49bae7",
+          "initialClusterVersion": "1.29.4-gke.1043002",
+          "initialNodeCount": 1,
+          "ipAllocationPolicy": {
+            "clusterIpv4Cidr": "10.84.0.0/14",
+            "clusterIpv4CidrBlock": "10.84.0.0/14",
+            "clusterSecondaryRangeName": "gke-ip-list-test-cluster-pods-b4fa9d0e",
+            "podCidrOverprovisionConfig": {},
+            "servicesIpv4Cidr": "34.118.224.0/20",
+            "servicesIpv4CidrBlock": "34.118.224.0/20",
+            "stackType": "IPV4",
+            "useIpAliases": true
+          },
+          "labelFingerprint": "a9dc16a7",
+          "legacyAbac": {},
+          "location": "us-west1",
+          "locations": [
+            "us-west1-a",
+            "us-west1-b",
+            "us-west1-c"
+          ],
+          "loggingConfig": {
+            "componentConfig": {
+              "enableComponents": [
+                "SYSTEM_COMPONENTS",
+                "WORKLOADS"
+              ]
+            }
+          },
+          "loggingService": "logging.googleapis.com/kubernetes",
+          "maintenancePolicy": {
+            "resourceVersion": "e3b0c442"
+          },
+          "masterAuth": {
+            "clientCertificateConfig": {},
+            "clusterCaCertificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVMVENDQXBXZ0F3SUJBZ0lSQU82VlM5ODUyS2tKNERIWlMwa20zTW93RFFZSktvWklodmNOQVFFTEJRQXcKTHpFdE1Dc0dBMVVFQXhNa09HTmhOekl6TW1ZdE5tRXdaUzAwTjJSa0xXSTNOR1F0T1dZM1lXRTNaV0V4TVRjMApNQ0FYRFRJME1EY3dNVEUxTVRVMU1Wb1lEekl3TlRRd05qSTBNVFl4TlRVeFdqQXZNUzB3S3dZRFZRUURFeVE0ClkyRTNNak15WmkwMllUQmxMVFEzWkdRdFlqYzBaQzA1WmpkaFlUZGxZVEV4TnpRd2dnR2lNQTBHQ1NxR1NJYjMKRFFFQkFRVUFBNElCandBd2dnR0tBb0lCZ1FERWhZRlNUMVhyUzV3OHJ3TnQrdTh0NmY0TUxlL0pVR3RZSWJFKwp2a3BwUG1UVjFWTUJRNVNyT0pkY0pCR1grVEdRS1habVRyOW53NW9FNU02cDRFYmprQXFLcExrQ0kzN1NxVFN4CkprWWtzM3Q4MVpvdXpIQ09idWhEUjZzejlBOFAzcEU4NWpFaFhIcnNQUjl2ZlVWTyt5c3RuOEJDWFZaeDlOYTUKVXZvd2hOZUVETTIxd24rNmg4eU5qQ094bzdkeVNkRVRHUnZPYVg2YmRrTDFsbkZ6dkVwVVlaWXJaMGUwSXpnegptS28wTll3eEhqWG5LWTgwS3R1UmdzU1BsTVNrWnFqbGM0cmJtS3VGc05pelpnbVA1ZFM5VW5tRGlEcHZvOTI0CkVSR3g5aFZqbDhBajNyNmljaDlUSGQ0REUxbzhSZzR3cmtseWpNT2liSWpOWnNJYjhHc3FvS0I0a2VOOU9PZHQKUVI1MU5Id1c5ZGh6c1h0MG1lSlVwZzlNTGVMRWRFdDJjVHI4Y3dJQldNdWNjb3BsY0w5TUJIVHhkaDF0QTJuRQo1bHdHWE5MWTZsRC9QT2NBU1Z6ZzRwSlBSRU5EZmFHem4yTXJoSk81ZnEvRW5TQ2tLSjhpVEcxTmxWUnR6dmIyCkFwYzkzVHlhbGxQSGE3MkpKUVFHSW43YXp4MENBd0VBQWFOQ01FQXdEZ1lEVlIwUEFRSC9CQVFEQWdJRU1BOEcKQTFVZEV3RUIvd1FGTUFNQkFmOHdIUVlEVlIwT0JCWUVGR2JtclFLdzMwZFhEejBLQWNyZkMrTVdUeVJHTUEwRwpDU3FHU0liM0RRRUJDd1VBQTRJQmdRQ2hyaG44eTYxT0FRY2JyY3FHMUl2R1pDYm80ck5tY2g4ZEVBQWJUdk8zCktLL05JZGVJNW01MlFMK1RZUW4yUGRxdXRLWEFFeXVWSHo2REVXUU4yQUVnUHExajZXV2N2dXd3RmlONEhITjAKbjNoWHRQc0xlTXhpYzBEY3gvSDlMbTI0UTMrekEvNG5yNy9JOEtZbWZObTZMN0dtRVhLbEs1U0NTclBKUWFjUQpYUHBYNDdtaFd1U0hGMWlTT1RwTHhTK1U4T1lwRzVCZDhHRytGdzRnZzlTOTNxQnpCeG0vaSsyK1l5ZDlmNlBXCm5kV2NjL2JVaWZkZ1puU0FtNU5lZTNSUmVoNXkvdk5SaldpMHFlMnpXTDV3WnZ4eUVZVStLRTVpdXRyOXpTcWMKY1FYck9iVEVnMng5eGoreFBkSUhoaFc5N3BwNlR6d091cFB5RDBFRFR3ZHgvd0p5ZnhXN1FlbW5zVUd6ZFBwcQpFTEp5NWhmLzNZQmlYRHpGdXRSNWZuQXJyUmRjcjA5NTZCVmdVK0VHZEFrNHlFa0xGMjlwTHl3L1BrU3o0UnBZCk8yVXI0K1ZOV09Md3B5TDc2SlhJRXpqSmxSdlo4OVUvcjZBWjdIQm1yeUpDVy9pZFBqWHYvekdtYkpGUmp1dVoKTTFWYzVhazBHMFJTVWoySEtmMlFnaXc9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+          },
+          "masterAuthorizedNetworksConfig": {
+            "gcpPublicCidrsAccessEnabled": true
+          },
+          "monitoringConfig": {
+            "advancedDatapathObservabilityConfig": {},
+            "componentConfig": {
+              "enableComponents": [
+                "SYSTEM_COMPONENTS"
+              ]
+            },
+            "managedPrometheusConfig": {
+              "enabled": true
+            }
+          },
+          "monitoringService": "monitoring.googleapis.com/kubernetes",
+          "name": "ip-list-test-cluster",
+          "network": "default",
+          "networkConfig": {
+            "defaultSnatStatus": {},
+            "network": "projects/fuzzy-pickles-428115/global/networks/default",
+            "serviceExternalIpsConfig": {},
+            "subnetwork": "projects/fuzzy-pickles-428115/regions/us-west1/subnetworks/default"
+          },
+          "nodePoolDefaults": {
+            "nodeConfigDefaults": {
+              "loggingConfig": {
+                "variantConfig": {
+                  "variant": "DEFAULT"
+                }
+              }
+            }
+          },
+          "notificationConfig": {
+            "pubsub": {}
+          },
+          "privateClusterConfig": {
+            "privateEndpoint": "10.138.0.2",
+            "publicEndpoint": "34.105.114.31"
+          },
+          "releaseChannel": {
+            "channel": "REGULAR"
+          },
+          "securityPostureConfig": {
+            "mode": "BASIC",
+            "vulnerabilityMode": "VULNERABILITY_MODE_UNSPECIFIED"
+          },
+          "selfLink": "https://container.googleapis.com/v1/projects/fuzzy-pickles-428115/locations/us-west1/clusters/ip-list-test-cluster",
+          "servicesIpv4Cidr": "34.118.224.0/20",
+          "shieldedNodes": {
+            "enabled": true
+          },
+          "status": "RUNNING",
+          "subnetwork": "default",
+          "zone": "us-west1"
+        },
+        "version": "v1"
+      }
+    ]
+  }
+]
