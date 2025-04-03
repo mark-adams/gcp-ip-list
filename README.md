@@ -30,7 +30,15 @@ go install github.com/mark-adams/gcp-ip-list/cmd/gcp-ip-list@latest
 
 # Running the tool
 
-Since this tool uses the [Google Cloud Client Libraries for Go](https://github.com/googleapis/google-cloud-go), the application will authenticate with Google using [Application Default Credentials](https://cloud.google.com/docs/authentication/application-default-credentials).
+This application authenticates with GCP using [Application Default Credentials](https://cloud.google.com/docs/authentication/application-default-credentials). Some examples of how you might authneticate include:
+
+- Run the application on a GCP resource (VM, Cloud Function, etc.) with an attached service account
+- Run the application on your workstation after using `gcloud auth application-default login` to use your user account's credentials
+- Run the application on your workstation using a service account's credentials by running `gcloud auth activate-service-account`
+
+For more information on authenticating, see the [Application Default Credentials](https://cloud.google.com/docs/authentication/application-default-credentials) documentation.
+
+Since this application uses the Cloud Asset Inventory APIs, your user account / service account will need to have the Cloud Asset Viewer (`roles/cloudasset.viewer`) IAM role assigned for the targeted scope's (i.e. organization, folder, or project) IAM policy.
 
 ## Usage
 ```
@@ -124,9 +132,7 @@ Verified OK
 
 ## Could not find default credentials
 
-```
-error getting public addresses: error setting up client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
-```
+> error getting public addresses: error setting up client: credentials: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information
 
 This means that you're likely running the tool locally from your workstation without having application default credentials set up. You can follow the link in the message or run `gcloud auth application-default login` to authenticate with GCP and obtain the proper credentials.
 
